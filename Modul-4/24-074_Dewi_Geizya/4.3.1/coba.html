@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Pribadi</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      input[type="submit"] {
+        background-color: #ffbd66;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #ffbd90;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="processData.php" method="post">
+      <label for="surname">Surname</label><br />
+      <input type="text" id="surname" name="surname" required /><br /><br />
+
+      <label for="username">Username</label><br />
+      <input type="text" id="username" name="username" required /><br /><br />
+
+      <label for="email">Email</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="password">Password</label><br />
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+      /><br /><br />
+
+      <label for="alamat">Alamat</label><br />
+      <textarea id="alamat" name="alamat" rows="4" cols="30"></textarea
+      ><br /><br />
+
+      <label for="semester">Semester</label><br />
+      <select id="semester" name="semester">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option></select
+      ><br /><br />
+
+      <input type="hidden" name="country" value="Indonesia" />
+
+      <p>
+        Country <br />
+        <br />
+        Kelamin
+      </p>
+      <input type="radio" id="laki" name="gender" value="Laki-laki" checked />
+      <label for="laki">Laki-laki</label>
+      <input type="radio" id="perempuan" name="gender" value="Perempuan" />
+      <label for="perempuan">Perempuan</label><br /><br />
+
+      <p>Hobi:</p>
+      <input type="checkbox" id="hobi1" name="hobi[]" value="Membaca" />
+      <label for="hobi1">Membaca</label><br />
+      <input type="checkbox" id="hobi2" name="hobi[]" value="Menyanyi" />
+      <label for="hobi2">Menyanyi</label><br />
+      <input type="checkbox" id="hobi3" name="hobi[]" value="Memasak" />
+      <label for="hobi3">Memasak</label><br />
+      <input type="checkbox" id="hobi4" name="hobi[]" value="Menggambar" />
+      <label for="hobi4">Menggambar</label><br /><br />
+
+      <input type="submit" value="submit" />
+    </form>
+  </body>
+</html>
